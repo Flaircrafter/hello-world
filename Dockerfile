@@ -1,6 +1,7 @@
 # Pull base image 
-From tomcat:8-jre8 
+From tomcat:jdk8-adoptopenjdk-openj9 
 
 # Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
+MAINTAINER "random"
+ 
 COPY ./webapp.war /usr/local/tomcat/webapps
