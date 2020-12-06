@@ -1,0 +1,12 @@
+---
+- hosts: web-server
+#  become: true
+  tasks:
+   - name: stop previous version docker
+     shell: docker stop tomcat-demo
+   - name: remove stopped container
+     shell: docker rm -vf tomcat-demo    
+   - name: remove docker images
+     shell: docker image rm -f kesh1990/tomcat-demo
+   - name: create docker image
+     shell: docker run -d --name tomcat-demo -p 8090:8080 kesh1990/tomcat-demo
