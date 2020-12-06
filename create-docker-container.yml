@@ -4,9 +4,12 @@
   tasks:
    - name: stop previous version docker
      shell: docker stop tomcat-demo
+     ignore_errors: yes
    - name: remove stopped container
      shell: docker rm -vf tomcat-demo    
+     ignore_errors: yes
    - name: remove docker images
      shell: docker image rm -f kesh1990/tomcat-demo
+     ignore_errors: yes
    - name: create docker image
      shell: docker run -d --name tomcat-demo -p 8090:8080 kesh1990/tomcat-demo
