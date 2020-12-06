@@ -1,6 +1,6 @@
 ---
 - hosts: web-server
-#  become: true
+  become: true
   tasks:
    - name: Stop previous version docker
      shell: docker stop tomcat-demo
@@ -13,7 +13,6 @@
      ignore_errors: yes
    - name: Restarting docker service
      shell: systemctl restart docker
-     shell: docker ps -a
      ignore_errors: yes
-   - name: create docker container
+   - name: Creating docker container
      shell: docker run -d --name tomcat-demo -p 8090:8080 kesh1990/tomcat-demo
