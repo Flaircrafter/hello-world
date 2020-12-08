@@ -8,4 +8,4 @@
      shell: systemctl restart docker
      ignore_errors: yes
    - name: Creating docker container
-     shell: docker run -d --name tomcat-demo -p 8090:8080 kesh1990/$BUILD_ID:version1
+     shell: docker run -d --name tomcat-demo -p 8090:8080 kesh1990/maven_project:latest
