@@ -25,9 +25,9 @@
   </head>
 
   <body>
-    <h1>Guess the Number Game</h1>
+    <h1>Guess the Number</h1>
 
-    <p>We have selected a random number between 1 and 100. Let's see if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>We have selected a random number between 1 and 100. Let's see if you can guess it in 10 turns or less. We'll tell you if your guess was higher or lower.</p>
 
     <div class="form">
       <label for="guessField">Enter a guess: </label>
@@ -63,7 +63,7 @@
 
         if (userGuess === randomNumber) {
           lastResult.textContent = 'Congratulations! You got it right!';
-          lastResult.style.backgroundColor = 'green';
+          lastResult.style.backgroundColor = 'yellow';
           lowOrHi.textContent = '';
           setGameOver();
         } else if (guessCount === 10) {
@@ -73,9 +73,9 @@
           lastResult.textContent = 'Wrong!';
           lastResult.style.backgroundColor = 'red';
           if(userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!';
+            lowOrHi.textContent = 'Last guess was lower!';
           } else if(userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!';
+            lowOrHi.textContent = 'Last guess was higher!';
           }
         }
 
