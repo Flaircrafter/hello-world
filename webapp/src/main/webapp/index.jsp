@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>JSP & JavaScript</title>
+    <title>War file deployment</title>
 
     <style>
       html {
