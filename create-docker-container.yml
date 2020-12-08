@@ -9,7 +9,7 @@
      shell: docker rm -vf tomcat-demo    
      ignore_errors: yes
    - name: Remove docker images
-     shell: docker image rm -f kesh1990/tomcat-demo
+     shell: docker image rmi -f kesh1990/tomcat-demo
      ignore_errors: yes
    - name: Restarting docker service
      shell: systemctl restart docker
