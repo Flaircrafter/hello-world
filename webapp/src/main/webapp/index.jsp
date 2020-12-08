@@ -1,11 +1,25 @@
-<header> Insert a stupid meme here </header>
-<h1> Hello, Welcome to the webapp </h1>
-<h2> Deployed on local tomcat server </h2>
-<h1> This page is hosted in a docker container running a tomcat docker image </h1>
-<h2> Deployement is done through Ansible </h2>
-<h2> Ansible playbook included in SCM</h2>
-<h2> Automation successful </h2>
-<b> Wonderful job  </b>
-<body>
-  <button>Click me</button>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Internal JavaScript example</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        function createParagraph() {
+          let para = document.createElement('p');
+          para.textContent = 'You clicked the button!';
+          document.body.appendChild(para);
+        }
+
+        const buttons = document.querySelectorAll('button');
+
+        for(let i = 0; i < buttons.length ; i++) {
+          buttons[i].addEventListener('click', createParagraph);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <button>Click me</button>
+  </body>
+</html>
