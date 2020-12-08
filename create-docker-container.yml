@@ -2,15 +2,8 @@
 - hosts: web-server
   become: true
   tasks:
-   - name: Stop previous version docker
-     shell: docker stop tomcat-demo
-     ignore_errors: yes
-   - name: Remove stopped container
-     shell: docker rm -vf tomcat-demo    
-     ignore_errors: yes
-   - name: Remove docker images
-     shell: docker image rmi -f kesh1990/tomcat-demo
-     ignore_errors: yes
+   - name: Replacing web container
+     script: /opt/playbooks/recreate-web-container.sh 8090
    - name: Restarting docker service
      shell: systemctl restart docker
      ignore_errors: yes
