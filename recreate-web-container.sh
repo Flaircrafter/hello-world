@@ -7,7 +7,7 @@ do
         docker stop "${id}"
         echo "Removing container"
         docker rm -vf "${id}"
-        docker rmi -f maven_project:latest
+        docker rmi -f kesh1990/maven_project:latest
         echo "Finish"
     fi
 done
