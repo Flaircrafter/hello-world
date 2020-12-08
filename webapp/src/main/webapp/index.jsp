@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Sabki mkc</title>
+    <title>JSP $ JavaScript</title>
 
     <style>
       html {
